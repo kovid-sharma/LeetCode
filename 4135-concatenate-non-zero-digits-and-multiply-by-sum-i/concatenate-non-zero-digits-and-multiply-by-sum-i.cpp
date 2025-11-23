@@ -1,27 +1,15 @@
 class Solution {
 public:
     long long sumAndMultiply(int n) {
-        long long pr = 1LL;
-        int new_n = 0;
-        int sum =0;
-        while(n)
-        {
-            if(n%10 == 0){
-
+        string nn = to_string(n);
+        long long s=0;
+        long long na= 0;
+        for(auto ch:nn){
+            if(ch!='0'){
+                na= na*10+ (ch-'0');
+                s+=(ch-'0');
             }
-            else{
-                new_n*=10;
-                new_n+=n%10;
-                sum+=n%10;
-            }
-            n/=10;
         }
-        int y =0;
-        while(new_n)
-        {
-            y = y*10+ new_n%10;
-            new_n/=10;
-        }
-        return pr*sum*y;
+        return s*na;
     }
 };
