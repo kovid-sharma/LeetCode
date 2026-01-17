@@ -11,7 +11,7 @@ public:
         vFences.push_back(n);
         int ans = INT_MIN;
         for (int i = 0; i < hFences.size(); i++) {
-            for (int j = 0; j < hFences.size(); j++) {
+            for (int j = i+1; j < hFences.size(); j++) {
                 st.insert(abs(hFences[i] - hFences[j]));
             }
         }
