@@ -9,7 +9,7 @@ public:
             if(seenF == false && s[i]=='1')
             {
                 seenF = true;
-                while(s[i]=='1' && i<n)
+                while(i<n && s[i]=='1')
                 {
                     i++;
                 }
